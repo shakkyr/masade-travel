@@ -5,8 +5,8 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
-import notesLogo from '../../images/notes1.png';
-import notesText from '../../images/notesText.png';
+import compasLogo from '../../images/compas.png';
+import masadeTxt from '../../images/mas.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './Styles';
 
@@ -40,8 +40,8 @@ const Navbar = () => {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <Link to="/" className={classes.brandContainer}>
-        <img component={Link} to="/" src={notesText} alt="icon" height="45px" />
-        <img className={classes.image} src={notesLogo} alt="icon" height="40px" />
+        <img component={Link} to="/" src={masadeTxt} alt="icon" height="45px" />
+        <img className={classes.image} src={compasLogo} alt="icon" height="40px" />
       </Link>
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
